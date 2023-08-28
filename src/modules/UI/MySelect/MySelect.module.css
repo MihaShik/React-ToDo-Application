@@ -1,0 +1,11 @@
+.mySelect {
+        background-color: rgb(255, 255, 255); /* Blue background */
+        border: 2px solid #9a9ad3;
+        color: rgb(0, 0, 0); /* White text */
+        font-size: 18px; /* Set a font size */
+        cursor: pointer; /* Mouse pointer on hover */
+        padding: 0%;
+        border-radius: 4px;
+        height: 34px;
+}
+

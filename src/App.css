@@ -1,0 +1,98 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+#root {
+    display: flex;
+    justify-content: center;
+}
+
+.App {
+    width: 800px;
+    background-color: white;
+}
+
+.header {
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.MyForm{
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+   
+}
+
+.post{
+    margin-top: 15px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    border: 2px solid #9a9ad3;
+    margin-top: 5px;
+    border-radius: 4px;
+}
+
+.post_status{
+    width: 30px;
+    height: 30px;
+    background-color: blueviolet;
+}
+
+.post__post-content{
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.postExecution {
+    color: rgb(100, 98, 98);
+    text-decoration:line-through;
+}
+
+.selection-form {
+    padding-top: 15px;
+    display: flex;
+    margin-top: 30px;
+}
+
+.post-list {
+    margin-top: 30px;
+}
+
+.logo {
+    display: block;
+    width: 40px;
+    height: 40px;
+    fill: tomato;
+    padding: 0;
+    margin: 0;
+}
+
+.logo:hover {
+    fill: royalblue;
+}
+
+.Test {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    border: none;
+    
+}
+
+.Test:hover .logo{
+    margin-top: -40px;
+}
