@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 import MyButton from './UI/MyButton/MyButton';
 import MyInput from './UI/MyInput/MyInput';
-import { useState } from 'react';
-import {ReactComponent as Add} from '../icons/add_FILL0_wght400_GRAD0_opsz40.svg';
+import {ReactComponent as Add} from '../icons/add.svg';
+
 const PostForm = ({create}) => {
 
     const [newContent, setNewContent] = useState('')
-    
     const creatNewPost = () => {
       const newPostTo = {
             id: Date.now(),
@@ -17,15 +17,13 @@ const PostForm = ({create}) => {
         setNewContent('')
     }
 
- 
     return ( 
     <div className='MyForm'>
-        <MyInput placeholder = {"Задание"} value = {newContent} onChange = {(e) => setNewContent(e.target.value)}/>
-        <MyButton onClick = {creatNewPost}>
+        <MyInput CssModifier = "NewPost" placeholder = {"Новое задание..."} value = {newContent} onChange = {(e) => setNewContent(e.target.value)}/>
+        <MyButton CssModifier = 'addBtn' onClick = {creatNewPost}>
             <Add className='icon'/>
-        </MyButton>
+        </MyButton> 
         </div>
-        
      );
 }
  

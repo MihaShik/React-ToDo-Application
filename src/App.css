@@ -27,25 +27,23 @@
     width: 800px;
     display: flex;
     justify-content: center;
-    padding-top: 15px;
+    padding-top: 10px;
    
 }
 
 .post{
     margin-top: 15px;
     padding: 10px;
+    margin-top: 5px;
+
     display: flex;
     justify-content: space-between;
-    font-size: 18px;
-    border: 2px solid #9a9ad3;
-    margin-top: 5px;
-    border-radius: 4px;
-}
+    align-items: center;
 
-.post_status{
-    width: 30px;
-    height: 30px;
-    background-color: blueviolet;
+    font-size: 18px;
+
+    border: 2px solid rgb(131, 131, 131);
+    border-radius: 4px;
 }
 
 .post__post-content{
@@ -61,38 +59,69 @@
 }
 
 .selection-form {
-    padding-top: 15px;
+    width: 100%;
     display: flex;
-    margin-top: 30px;
-}
-
-.post-list {
-    margin-top: 30px;
-}
-
-.logo {
-    display: block;
-    width: 40px;
-    height: 40px;
-    fill: tomato;
-    padding: 0;
-    margin: 0;
-}
-
-.logo:hover {
-    fill: royalblue;
-}
-
-.Test {
-    width: 40px;
-    height: 40px;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-    border: none;
     
 }
 
-.Test:hover .logo{
-    margin-top: -40px;
+.post-list {
+    margin-top: 10px;
+}
+
+
+.post-enter {
+    opacity: 0;
+}
+.post-enter-active {
+    opacity: 1;
+    transition: opacity 300ms ease-in;
+}
+.post-exit {
+    opacity: 1;
+}
+.post-exit-active {
+    opacity: 0;
+    transition: opacity 300ms ease-in;
+}
+
+.cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.fade-enter-active {
+    animation: fade-in 300ms forwards;
+}
+
+.fade-exit-active {
+    animation: fade-out 300ms forwards;
+}
+
+@keyframes fade-in {
+
+0%  {
+    opacity: 0;
+    transform: translateX(-300px);
+}
+
+100% {
+    opacity: 1;
+    transform: translateX(0);
+}
+}
+
+
+@keyframes fade-out {
+
+0%  {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+100% {
+    opacity: 0;
+    transform: translateX(300px);
+}
 }

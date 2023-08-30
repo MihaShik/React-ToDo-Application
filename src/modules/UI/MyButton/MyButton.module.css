@@ -1,5 +1,8 @@
-*{
-  box-sizing: border-box;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: monospace;
 }
 
 /* .imageButton {
@@ -14,36 +17,43 @@
 
 
 .imageButton {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
+  background-color: white;
 
   padding: 0;
   margin: 0;
   border: none;
+  fill: rgb(142, 142, 142);
 }
 
 
-.imageButton:first-child{
-  fill: rgb(57, 175, 85);
-  padding: 0;
-  margin: 0;
-  background-color: blueviolet;
-  display: block;
+.imageButton:hover{
+  fill: rgb(0, 117, 255);
+}
+
+.imageButton:active{
+  fill: rgb(0, 92, 200);
 }
 
 
-
-.imageButton:first-child:hover{
-  fill: rgb(62, 47, 147);
-  padding: 0;
-  margin: 0;
+.addBtn{
+  border-top: 2px solid rgb(131, 131, 131);
+  border-right: 2px solid rgb(131, 131, 131);
+  border-bottom: 2px solid rgb(131, 131, 131);
+  border-radius: 0 4px 4px 0;
+  width: 70px;
+  background-color: rgb(243, 243, 243);
+  
 }
 
-.chackBoxBtn {
-  width: 40px;
-  height: 40px;
 
-  padding: 0;
-  margin: 0;
-  border: 1 solid rgb(62, 47, 147);
+.addBtn:hover {
+  background-color: rgb(0, 117, 255);
+  fill: rgb(255, 255, 255);
+  transition: all 0.3s linear;
+}
+
+.addBtn:active {
+  background-color: rgb(0, 92, 200);
 }

@@ -1,11 +1,36 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
 .mySelect {
         background-color: rgb(255, 255, 255); /* Blue background */
-        border: 2px solid #9a9ad3;
+        border: 2px solid rgb(0, 117, 255);
         color: rgb(0, 0, 0); /* White text */
         font-size: 18px; /* Set a font size */
         cursor: pointer; /* Mouse pointer on hover */
         padding: 0%;
-        border-radius: 4px;
-        height: 34px;
+        border-radius: 4px 0 0 4px; 
+        height: 44px;
+        background-color: rgb(243, 243, 243);
+
+        color: rgb(0, 117, 255);
+        border-right: 0;
+        outline:none;
+        padding-left: 10px;
+        font-family: monospace;
+        
+        
 }
 
+.mySelect:focus {
+        
+        color: #000000;
+}
+
+
+.mySelect option:first-child {
+        color: rgb(0, 0, 0); /* White text */
+}
