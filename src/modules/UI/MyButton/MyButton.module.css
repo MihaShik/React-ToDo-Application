@@ -57,3 +57,26 @@
 .addBtn:active {
   background-color: rgb(0, 92, 200);
 }
+
+.deleteAllBtn {
+  background-color: rgb(243, 243, 243);
+  margin-left: 5px;
+
+  width: 100px;
+  fill: rgb(0, 117, 255);
+  
+  border: 2px solid rgb(131, 131, 131);
+  border-radius: 4px;
+}
+
+
+.deleteAllBtn:hover {
+  background-color: rgb(0, 117, 255);
+
+  fill: rgb(255, 255, 255);
+  transition: all 0.3s linear;
+}
+
+.OnOffVis {
+  width: 70px;
+}

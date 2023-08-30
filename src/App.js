@@ -31,13 +31,18 @@ const changeStatus = (id) => {
   }))
 }
 
+const removeAllСompletedPosts = () => {
+  setPost(posts.filter((post) => !post.statusExecution ))
+}
+
   return (
     <div className="App">
       <Header/>
       <PostForm create = {addNewPost}/>
       <SelectionForm
         filter = {filter}
-        setFilter = {setFilter}/>
+        setFilter = {setFilter}
+        removeAll = {removeAllСompletedPosts}/>
       <PostList posts = {SearchAndQearyPosts} removePost = {removePost} changeStatus = {changeStatus}/>
      
     </div>

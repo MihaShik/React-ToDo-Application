@@ -7,8 +7,10 @@ import MyInput from "./UI/MyInput/MyInput";
 
 import { ReactComponent as FilterOn} from "../icons/filter_list_on.svg";
 import { ReactComponent as FilterOff} from "../icons/filter_list_off.svg";
+import { ReactComponent as Delete} from "../icons/delete.svg";
 
-const SelectionForm = ({setFilter, filter}) => {
+const SelectionForm = ({setFilter, filter, removeAll}) => {
+
 const [FormVisibility, setFormVisibility] = useState(true)
 
 const changeVisibility = () => {
@@ -27,13 +29,13 @@ return (
       { FormVisibility 
         ?
         <div className="cont">
-          <MyButton onClick={changeVisibility}>
+          <MyButton CssModifier = {'OnOffVis'} onClick={changeVisibility}>
             <FilterOn/>
           </MyButton>
         </div>
         :
         <div className="cont">
-          <MyButton onClick={changeVisibility}>
+          <MyButton CssModifier = {'OnOffVis'} onClick={changeVisibility}>
             <FilterOff/>
           </MyButton>
   
@@ -53,6 +55,9 @@ return (
               value={filter.query} 
               onChange = {(e)=> setFilter({...filter, query: e.target.value})}
             />
+            <MyButton CssModifier = {'deleteAllBtn'} onClick = {removeAll}>
+              <Delete/>
+            </MyButton>
           </form> 
         </div>
         }
